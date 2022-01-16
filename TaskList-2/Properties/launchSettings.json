@@ -2,7 +2,7 @@
   "profiles": {
     "TaskList-2": {
       "commandName": "Project",
-      "commandLineArgs": "-help"
+      "commandLineArgs": "-Kill notepad"
     }
   }
 }

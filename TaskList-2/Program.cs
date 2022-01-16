@@ -8,47 +8,53 @@ namespace TaskList_2
         static void Main(string[] args)
         {
             if (args != null && args.Length > 0)
+              
             {
                 string procArgum = args[0];
-                string killIdProc = args[0];
-                string KillNameProc = args[0];
-                
-                
+                //string procArgum2 = args[1];
+                //string[] ArrayArgum = new string[] { procArgum, procArgum2 };
 
-                if (procArgum == "-help")
+                switch (procArgum)
                 {
-                    Console.WriteLine("для отображения всех процессов введите имя программы -Listproc");
-                    Console.WriteLine("Для прибития процесса по имени введите имя программы -kill имя процесса");
-                    Console.WriteLine("Для прибития процесса по ID введите имя программы -Kid ID процесса");
-                    return;
-                }
-               
-                if (procArgum == "-listproc")
-                {
-                    Process[] procList = Process.GetProcesses();
-                    foreach (var ListingP in procList)
+                    case "-help":
                     {
-                        Console.WriteLine($"ID: {ListingP.Id}  Имя: {ListingP.ProcessName} ");
-                    }
-                    return;
-                }
-                if (procArgum == "-Kill")
-                {
+                            Console.WriteLine("для отображения всех процессов введите имя программы -listproc");
+                            Console.WriteLine("Для прибития процесса по имени введите имя программы -kill имя процесса");
+                            Console.WriteLine("Для прибития процесса по ID введите имя программы -kid ID процесса");
+                            return;
+                        }
 
-                    Process[] NameProc = Process.GetProcessesByName(KillNameProc);
-                    foreach (var NameKill in NameProc)
-                    {
-                        NameKill.Kill();
-                    }
-                    return;
-                }
-                if (procArgum == "-Kid")
-                {
-                    int KillPID = Int32.Parse(killIdProc);
-                    Process iProc = Process.GetProcessById(processId: KillPID);
-                    iProc.Kill();
+                    case "-listproc":
+                        {
 
-                    return;
+                            Process[] procList = Process.GetProcesses();
+                            foreach (var ListingP in procList)
+                            {
+                                Console.WriteLine($"ID: {ListingP.Id}  Имя: {ListingP.ProcessName} ");
+                            }
+                            break;
+                        }
+
+                    case "-Kill":
+                        {
+                           
+                            Process[] NameProc = Process.GetProcessesByName(args[1]);
+                            foreach (var NameKill in NameProc)
+                            {
+                                NameKill.Kill();
+                            }
+                            break;
+                        }
+
+                    case "-kid":
+                        {
+                            
+                            int KillPID = Int32.Parse(args[1]);
+                            Process iProc = Process.GetProcessById(processId: KillPID);
+                            iProc.Kill();
+
+                            break;
+                        }
                 }
             }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\TaskList-2\\TaskList-2.csproj": {}
+    "C:\\repository\\leass_6\\TaskList-2\\TaskList-2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\TaskList-2\\TaskList-2.csproj": {
+    "C:\\repository\\leass_6\\TaskList-2\\TaskList-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\TaskList-2\\TaskList-2.csproj",
+        "projectUniqueName": "C:\\repository\\leass_6\\TaskList-2\\TaskList-2.csproj",
         "projectName": "TaskList-2",
-        "projectPath": "C:\\Users\\User\\source\\repos\\TaskList-2\\TaskList-2.csproj",
+        "projectPath": "C:\\repository\\leass_6\\TaskList-2\\TaskList-2.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\TaskList-2\\obj\\",
+        "outputPath": "C:\\repository\\leass_6\\TaskList-2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
