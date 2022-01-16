@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TaskList-2": {
+      "commandName": "Project",
+      "commandLineArgs": "-help"
+    }
+  }
+}
